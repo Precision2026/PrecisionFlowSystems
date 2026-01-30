@@ -1,14 +1,14 @@
 // components/home/Hero.tsx
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 import { CheckCircle2, ArrowRight } from 'lucide-react';
 
 export default function Hero() {
-  const container = {
+  const container: Variants = {
     hidden: { opacity: 0 },
     visible: { opacity: 1, transition: { staggerChildren: 0.1 } },
   };
 
-  const letter = {
+  const letter: Variants = {
     visible: { opacity: 1, y: 0, transition: { type: "spring", damping: 12 } },
     hidden: { opacity: 0, y: 50 },
   };
