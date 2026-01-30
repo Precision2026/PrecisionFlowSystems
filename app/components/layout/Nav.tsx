@@ -1,6 +1,7 @@
 // components/layout/Navbar.tsx
 "use client";
 import { Mail, Phone, Globe, ArrowRight } from 'lucide-react';
+import Image from 'next/image';
 
 export default function Navbar() {
   return (
@@ -9,14 +10,14 @@ export default function Navbar() {
       <div className="hidden lg:flex bg-slate-950 text-white py-3 border-b border-white/10 px-8 justify-between items-center text-[14px] font-black uppercase tracking-widest relative z-[110]">
         <div className="flex gap-8">
           <a href="tel:+918750503536" className="flex items-center gap-2 hover:text-yellow-500 transition-colors">
-            <Phone size={16} className="text-red-600" /> +91 8750503536
+            <Phone size={16} className="text-red-600" /> +91 7839929808
           </a>
           <a href="mailto:sales@precisionflowsystems.co.in" className="flex items-center gap-2 hover:text-yellow-500 transition-colors lowercase font-sans text-sm">
             <Mail size={16} className="text-red-600" /> sales@precisionflowsystems.co.in
           </a>
         </div>
         <div className="flex items-center gap-6 text-slate-400">
-          <span className="flex items-center gap-2"><Globe size={14}/> Serving: Global Export Markets</span>
+          <span className="flex items-center gap-2"><Globe size={14}/> Serving: Indian Markets</span>
         </div>
       </div>
 
@@ -25,12 +26,17 @@ export default function Navbar() {
         <div className="max-w-[1400px] mx-auto h-24 flex items-center justify-between">
           {/* Logo Area */}
           <div className="flex items-center gap-4 group cursor-pointer">
-            <div className="w-14 h-14 bg-red-600 rounded-sm flex items-center justify-center text-white font-black text-2xl transition-transform group-hover:scale-105">PFS</div>
-            <div>
-              <h1 className="font-black text-2xl tracking-tighter leading-none uppercase">Precision <span className="text-red-600">Flow</span></h1>
-              <p className="text-[12px] font-bold text-slate-400 tracking-[0.3em] uppercase">Systems</p>
-            </div>
-          </div>
+  {/* Replaced the red div with this Image container */}
+  <div className="relative w-80 h-24 overflow-hidden transition-transform"> 
+  <Image
+    src="/pfs.jpeg"
+    alt="Precision Flow Systems Logo"
+    fill
+    className="object-cover object-center" // This crops the sides and keeps the middle
+    priority
+  />
+</div>
+</div>
 
           {/* Nav Links */}
           <div className="hidden lg:flex items-center gap-12 text-sm font-black uppercase tracking-widest">

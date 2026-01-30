@@ -23,14 +23,14 @@ export default function Footer() {
           <h4 className="text-yellow-500 font-black uppercase tracking-[0.2em] text-xs mb-8">Contact Sales</h4>
           <ul className="space-y-6 text-sm font-bold uppercase">
             <li className="flex gap-3 items-center hover:text-red-600 transition-colors">
-              <Phone size={18} className="text-red-600" /> +91 8750503536
+              <Phone size={18} className="text-red-600" /> +91 7839929808
             </li>
             <li className="flex gap-3 items-center hover:text-red-600 transition-colors lowercase font-sans">
               <Mail size={18} className="text-red-600" /> sales@precisionflowsystems.co.in
             </li>
             <li className="flex gap-3 items-start">
               <MapPin size={18} className="text-red-600 shrink-0" /> 
-              <span>Mumbai Metropolitan Region,<br/> Maharashtra, India</span>
+              <span>Lubna Height, 5th floor, Shil Road, behind Dosti Road, Thane Mumbai, Maharastra 400612</span>
             </li>
           </ul>
         </div>
