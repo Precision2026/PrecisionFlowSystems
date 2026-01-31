@@ -38,7 +38,7 @@ export default function Navbar() {
             {/* Replaced the red div with this Image container */}
             <div className="relative w-80 h-24 overflow-hidden transition-transform">
               <Image
-                src="/pfs.jpeg"
+                src="/pfs.png"
                 alt="Precision Flow Systems Logo"
                 fill
                 className="object-cover object-center" // This crops the sides and keeps the middle
