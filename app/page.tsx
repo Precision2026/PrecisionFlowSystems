@@ -57,7 +57,7 @@ export default function PrecisionFlowPage() {
     e.preventDefault();
     const data = new FormData(e.currentTarget);
     const text = `*New Inquiry*%0A*Name:* ${data.get('name')}%0A*Interested In:* ${data.get('product')}%0A*Details:* ${data.get('message')}`;
-    window.open(`https://wa.me/918750503536?text=${text}`, '_blank');
+    window.open(`https://wa.me/917839929808?text=${text}`, '_blank');
   };
 
   return (
