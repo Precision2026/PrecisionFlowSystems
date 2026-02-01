@@ -39,15 +39,15 @@ export default function Footer() {
             Contact Sales
           </h4>
           <ul className="space-y-6 text-sm font-bold uppercase">
-            <li className="flex gap-3 items-center hover:text-red-600 transition-colors">
-              <Phone size={18} className="text-red-600" /> +91 7839929808
+            <li className="flex gap-3 items-center hover:text-red-800 transition-colors">
+              <Phone size={18} className="text-red-800" /> +91 7839929808
             </li>
-            <li className="flex gap-3 items-center hover:text-red-600 transition-colors lowercase font-sans">
-              <Mail size={18} className="text-red-600" />{" "}
+            <li className="flex gap-3 items-center hover:text-red-800 transition-colors lowercase font-sans">
+              <Mail size={18} className="text-red-800" />{" "}
               sales@precisionflowsystems.co.in
             </li>
             <li className="flex gap-3 items-start">
-              <MapPin size={18} className="text-red-600 shrink-0" />
+              <MapPin size={18} className="text-red-800 shrink-0" />
               <span>
                 Lubna Height, 5th floor, Shil Road, behind Dosti Road, Thane
                 Mumbai, Maharastra 400612
@@ -85,7 +85,7 @@ export default function Footer() {
             <li>
               <a
                 href="#quote"
-                className="text-red-600 hover:text-white transition-colors"
+                className="text-red-800 hover:text-white transition-colors"
               >
                 Request Technical Data
               </a>

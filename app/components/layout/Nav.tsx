@@ -2,6 +2,7 @@
 "use client";
 import { Mail, Phone, Globe, ArrowRight } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Navbar() {
   return (
@@ -13,13 +14,13 @@ export default function Navbar() {
             href="tel:+918750503536"
             className="flex items-center gap-2 hover:text-yellow-500 transition-colors"
           >
-            <Phone size={16} className="text-red-600" /> +91 7839929808
+            <Phone size={16} className="text-red-800" /> +91 7839929808
           </a>
           <a
             href="mailto:sales@precisionflowsystems.co.in"
             className="flex items-center gap-2 hover:text-yellow-500 transition-colors lowercase font-sans text-sm"
           >
-            <Mail size={16} className="text-red-600" />{" "}
+            <Mail size={16} className="text-red-800" />{" "}
             sales@precisionflowsystems.co.in
           </a>
         </div>
@@ -38,7 +39,7 @@ export default function Navbar() {
             {/* Replaced the red div with this Image container */}
             <div className="relative w-80 h-24 overflow-hidden transition-transform">
               <Image
-                src="/pfs.png"
+                src="/pfs.jpeg"
                 alt="Precision Flow Systems Logo"
                 fill
                 className="object-cover object-center" // This crops the sides and keeps the middle
@@ -51,25 +52,25 @@ export default function Navbar() {
           <div className="hidden lg:flex items-center gap-12 text-sm font-black uppercase tracking-widest">
             <a
               href="#products"
-              className="hover:text-red-600 transition-colors relative group"
+              className="hover:text-red-800 transition-colors relative group"
             >
               Products
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-red-600 transition-all group-hover:w-full"></span>
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-red-800 transition-all group-hover:w-full"></span>
             </a>
             <a
               href="#industries"
-              className="hover:text-red-600 transition-colors relative group"
+              className="hover:text-red-800 transition-colors relative group"
             >
               Industries
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-red-600 transition-all group-hover:w-full"></span>
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-red-800 transition-all group-hover:w-full"></span>
             </a>
-            <a
-              href="#about"
-              className="hover:text-red-600 transition-colors relative group"
+            <Link
+              href="about"
+              className="hover:text-red-800 transition-colors relative group"
             >
               About
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-red-600 transition-all group-hover:w-full"></span>
-            </a>
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-red-800 transition-all group-hover:w-full"></span>
+            </Link>
             <a
               href="#quote"
               className="bg-yellow-500 text-black px-8 py-4 rounded-sm hover:bg-black hover:text-white transition-all flex items-center gap-3"

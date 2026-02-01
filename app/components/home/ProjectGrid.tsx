@@ -24,7 +24,7 @@ export default function ProductGrid({
       <div className="max-w-7xl mx-auto px-8">
         <header className="mb-20 text-center">
           <h2 className="text-5xl font-black uppercase mb-4 italic tracking-tighter">
-            Our Product <span className="text-red-600 underline">Ranges</span>
+            Our Product <span className="text-red-800 underline">Ranges</span>
           </h2>
           <p className="text-slate-500 font-bold uppercase tracking-widest text-sm italic">
             High-Precision Instrumentation Components
@@ -35,7 +35,7 @@ export default function ProductGrid({
           {productCategories.map((cat) => (
             <article
               key={cat.name}
-              className={`group border-4 transition-all overflow-hidden ${expandedCat === cat.name ? "border-red-600" : "border-slate-100 hover:border-yellow-500"}`}
+              className={`group border-4 transition-all overflow-hidden ${expandedCat === cat.name ? "border-red-800" : "border-slate-100 hover:border-yellow-500"}`}
             >
               <div className="relative h-64 overflow-hidden">
                 <img
@@ -68,7 +68,7 @@ export default function ProductGrid({
                   onClick={() =>
                     setExpandedCat(expandedCat === cat.name ? null : cat.name)
                   }
-                  className="mt-8 flex items-center gap-2 text-red-600 font-black uppercase tracking-widest text-sm"
+                  className="mt-8 flex items-center gap-2 text-red-800 font-black uppercase tracking-widest text-sm"
                 >
                   {expandedCat === cat.name
                     ? "Show Less"

@@ -16,14 +16,14 @@ export default function Hero() {
   return (
     <section className="pt-48 pb-32 bg-slate-50 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-8 relative z-10">
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="bg-red-600 text-white px-4 py-2 rounded-full text-xs font-black uppercase mb-8 inline-flex items-center gap-2">
+        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="bg-red-800 text-white px-4 py-2 rounded-full text-xs font-black uppercase mb-8 inline-flex items-center gap-2">
           <CheckCircle2 size={16} /> Premium SS 316 Quality
         </motion.div>
         
         <motion.h1 variants={container} initial="hidden" animate="visible" className="text-7xl md:text-9xl font-black leading-[0.85] uppercase tracking-tighter mb-10">
           <div className="flex flex-wrap gap-x-4">
             {"Flow Without Failure.".split(" ").map((word, i) => (
-              <span key={i} className={`flex ${word === "Without" ? "text-red-600 italic underline decoration-yellow-500 decoration-8 underline-offset-8" : ""}`}>
+              <span key={i} className={`flex ${word === "Without" ? "text-red-800 italic underline decoration-yellow-500 decoration-8 underline-offset-8" : ""}`}>
                 {word.split("").map((char, j) => (
                   <motion.span key={j} variants={letter}>{char}</motion.span>
                 ))}
@@ -37,7 +37,7 @@ export default function Hero() {
         </p>
         
         <div className="flex flex-col sm:flex-row gap-6">
-          <a href="#quote" className="bg-black text-white px-10 py-6 text-lg font-black uppercase flex items-center justify-center gap-4 hover:bg-red-600 transition-all">
+          <a href="#quote" className="bg-black text-white px-10 py-6 text-lg font-black uppercase flex items-center justify-center gap-4 hover:bg-red-800 transition-all">
             Browse Collection <ArrowRight />
           </a>
         </div>
