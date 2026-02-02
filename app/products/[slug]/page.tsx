@@ -1,5 +1,5 @@
 // app/products/[slug]/page.tsx
-import { productCategories } from "../../constants/page";
+import { productCategories } from "../../constants/product";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
@@ -33,7 +33,10 @@ export default async function Page({
             href="/#products"
             className="group inline-flex items-center gap-2 text-slate-500 hover:text-red-500 mb-12 transition-colors uppercase text-[10px] font-black tracking-[0.3em]"
           >
-            <ArrowLeft size={14} className="transition-transform group-hover:-translate-x-2" />
+            <ArrowLeft
+              size={14}
+              className="transition-transform group-hover:-translate-x-2"
+            />
             Technical Catalog
           </Link>
 
@@ -41,13 +44,17 @@ export default async function Page({
             <div className="order-2 lg:order-1">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-12 h-1 bg-red-800" />
-                <span className="text-xs font-black tracking-widest text-red-800 uppercase">Industrial Specification</span>
+                <span className="text-xs font-black tracking-widest text-red-800 uppercase">
+                  Industrial Specification
+                </span>
               </div>
               <h1 className="text-5xl lg:text-8xl font-black uppercase italic tracking-tighter leading-[0.9] text-white mb-8">
-                {category.name}<span className="text-red-800">.</span>
+                {category.name}
+                <span className="text-red-800">.</span>
               </h1>
               <p className="max-w-xl text-lg leading-relaxed text-slate-400 lg:text-xl">
-                {category.description || "High-precision components engineered for high-pressure industrial environments."}
+                {category.description ||
+                  "High-precision components engineered for high-pressure industrial environments."}
               </p>
             </div>
 
@@ -64,7 +71,9 @@ export default async function Page({
                 <div className="absolute p-6 border bottom-6 left-6 right-6 border-white/10 backdrop-blur-md bg-black/20">
                   <div className="flex items-center gap-3">
                     <ShieldCheck className="text-yellow-500" size={20} />
-                    <span className="text-[10px] font-black uppercase tracking-[0.2em] text-white">Certified Material Grade</span>
+                    <span className="text-[10px] font-black uppercase tracking-[0.2em] text-white">
+                      Certified Material Grade
+                    </span>
                   </div>
                 </div>
               </div>
@@ -78,8 +87,12 @@ export default async function Page({
         <div className="mx-auto max-w-7xl">
           <div className="flex flex-col justify-between gap-6 pb-12 mb-16 border-b md:flex-row md:items-end border-slate-100">
             <div>
-              <h2 className="text-4xl font-black tracking-tighter uppercase text-slate-900">Available Variants</h2>
-              <p className="text-slate-500 font-bold uppercase text-[10px] tracking-widest mt-2">Technical Specification Range</p>
+              <h2 className="text-4xl font-black tracking-tighter uppercase text-slate-900">
+                Available Variants
+              </h2>
+              <p className="text-slate-500 font-bold uppercase text-[10px] tracking-widest mt-2">
+                Technical Specification Range
+              </p>
             </div>
             <div className="text-4xl italic font-black select-none text-slate-100">
               /{category.items.length.toString().padStart(2, "0")}
@@ -89,8 +102,11 @@ export default async function Page({
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
             {category.items.map((item, idx) => {
               // Create a consistent slug for the image filename
-              const imageSlug = item.toLowerCase().replace(/\s+/g, "-").replace(/[()]/g, "");
-              
+              const imageSlug = item
+                .toLowerCase()
+                .replace(/\s+/g, "-")
+                .replace(/[()]/g, "");
+
               return (
                 <div
                   key={idx}
@@ -106,21 +122,30 @@ export default async function Page({
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw"
                     />
                     <div className="absolute top-4 left-4">
-                        <span className="text-[10px] font-black text-slate-300 italic">0{idx + 1}</span>
+                      <span className="text-[10px] font-black text-slate-300 italic">
+                        0{idx + 1}
+                      </span>
                     </div>
                   </div>
 
                   {/* Item Details */}
                   <div className="flex flex-col">
                     <div className="flex items-center justify-between mb-2">
-                        <span className="text-sm font-black tracking-tight uppercase transition-colors text-slate-800 group-hover:text-red-800">
-                            {item}
-                        </span>
-                        <CheckCircle2 size={16} className="transition-colors text-slate-200 group-hover:text-red-800" />
+                      <span className="text-sm font-black tracking-tight uppercase transition-colors text-slate-800 group-hover:text-red-800">
+                        {item}
+                      </span>
+                      <CheckCircle2
+                        size={16}
+                        className="transition-colors text-slate-200 group-hover:text-red-800"
+                      />
                     </div>
                     <div className="flex items-center gap-3">
-                        <span className="text-[9px] font-bold text-white bg-slate-900 px-2 py-0.5 uppercase tracking-[0.2em]">ASTM SS 316</span>
-                        <span className="text-[9px] font-bold text-slate-400 uppercase tracking-widest">Precision Machined</span>
+                      <span className="text-[9px] font-bold text-white bg-slate-900 px-2 py-0.5 uppercase tracking-[0.2em]">
+                        ASTM SS 316
+                      </span>
+                      <span className="text-[9px] font-bold text-slate-400 uppercase tracking-widest">
+                        Precision Machined
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -133,9 +158,13 @@ export default async function Page({
             <div className="relative z-10 flex flex-col items-center justify-between gap-12 lg:flex-row">
               <div className="max-w-xl text-center lg:text-left">
                 <h3 className="mb-6 text-3xl italic font-black leading-none tracking-tighter text-white uppercase lg:text-5xl">
-                  Inquire about <br /> <span className="text-red-800">{category.name}</span>
+                  Inquire about <br />{" "}
+                  <span className="text-red-800">{category.name}</span>
                 </h3>
-                <p className="text-xs font-bold tracking-widest uppercase text-slate-400">Technical sales support available for custom threading and sizing.</p>
+                <p className="text-xs font-bold tracking-widest uppercase text-slate-400">
+                  Technical sales support available for custom threading and
+                  sizing.
+                </p>
               </div>
               <a
                 href="https://wa.me/917839929808"
@@ -148,7 +177,7 @@ export default async function Page({
           </div>
         </div>
       </main>
-      <Footer/>
+      <Footer />
     </div>
   );
 }

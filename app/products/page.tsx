@@ -2,7 +2,7 @@
 import Navbar from "../components/layout/Nav";
 import Footer from "../components/layout/Footer";
 import ProductGrid from "../components/home/ProjectGrid";
-import { productCategories } from "../constants/page";
+import { productCategories } from "../constants/product";
 import { Package, ShieldCheck, Zap } from "lucide-react";
 
 export default function AllProductsPage() {
@@ -15,13 +15,17 @@ export default function AllProductsPage() {
         <div className="px-8 mx-auto max-w-7xl">
           <div className="flex items-center gap-3 mb-6">
             <div className="w-12 h-1 bg-red-800" />
-            <span className="text-xs font-black tracking-widest text-red-800 uppercase">Complete Catalog</span>
+            <span className="text-xs font-black tracking-widest text-red-800 uppercase">
+              Complete Catalog
+            </span>
           </div>
           <h1 className="mb-8 text-5xl italic font-black leading-none tracking-tighter uppercase lg:text-7xl">
             Engineering <span className="text-red-800">Inventory.</span>
           </h1>
           <p className="max-w-2xl text-lg leading-relaxed text-slate-400">
-            Browse our full range of high-performance instrumentation fittings, valves, and specialized process equipment manufactured to ASTM standards.
+            Browse our full range of high-performance instrumentation fittings,
+            valves, and specialized process equipment manufactured to ASTM
+            standards.
           </p>
         </div>
       </section>

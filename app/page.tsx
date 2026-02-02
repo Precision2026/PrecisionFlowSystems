@@ -7,8 +7,14 @@ import Hero from "./components/home/Hero";
 import ProductGrid from "./components/home/ProjectGrid"; // Import back
 import AboutContent from "./components/sharedAbout/shared";
 import BusinessSchema from "./components/seo/BusinessSchema";
-import { productCategories } from "./constants/page";
-import { Factory, Settings, Globe2, ShieldCheck, MessageSquare } from "lucide-react";
+import { productCategories } from "./constants/product";
+import {
+  Factory,
+  Settings,
+  Globe2,
+  ShieldCheck,
+  MessageSquare,
+} from "lucide-react";
 
 const industries = [
   { name: "Oil & Gas", icon: <Factory size={48} /> },
@@ -43,9 +49,9 @@ export default function PrecisionFlowPage() {
       {/* Featured Products Section (Imported Component) */}
       <section id="products" className="py-24">
         <div className="px-8 mx-auto mb-12 max-w-7xl">
-           <h2 className="text-4xl italic font-black tracking-tighter uppercase lg:text-6xl">
+          <h2 className="text-4xl italic font-black tracking-tighter uppercase lg:text-6xl">
             Featured <span className="text-red-800">Categories.</span>
-           </h2>
+          </h2>
         </div>
         <ProductGrid productCategories={productCategories} />
       </section>
@@ -58,9 +64,14 @@ export default function PrecisionFlowPage() {
           </h2>
           <div className="grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-6">
             {industries.map((ind) => (
-              <div key={ind.name} className="flex flex-col items-center gap-4 p-8 transition-all border border-slate-800 hover:border-yellow-500">
+              <div
+                key={ind.name}
+                className="flex flex-col items-center gap-4 p-8 transition-all border border-slate-800 hover:border-yellow-500"
+              >
                 <div className="text-yellow-500">{ind.icon}</div>
-                <p className="text-xs font-black tracking-widest uppercase">{ind.name}</p>
+                <p className="text-xs font-black tracking-widest uppercase">
+                  {ind.name}
+                </p>
               </div>
             ))}
           </div>
@@ -78,20 +89,45 @@ export default function PrecisionFlowPage() {
                   Request <span className="text-red-800">Quote.</span>
                 </h2>
                 <div className="flex items-start gap-4">
-                  <MessageSquare className="text-green-600 shrink-0" size={28} />
+                  <MessageSquare
+                    className="text-green-600 shrink-0"
+                    size={28}
+                  />
                   <p className="text-sm font-bold leading-snug text-slate-500 md:text-base">
-                    Instantly connect with our technical sales desk via WhatsApp for ASTM SS 316 component pricing.
+                    Instantly connect with our technical sales desk via WhatsApp
+                    for ASTM SS 316 component pricing.
                   </p>
                 </div>
               </header>
 
-              <form onSubmit={handleWhatsAppRedirect} className="space-y-5 lg:space-y-6">
-                <input name="name" required placeholder="Full Name" className="w-full py-4 font-bold border-b-2 outline-none border-slate-200 focus:border-red-800" />
-                <select name="product" className="w-full py-4 font-bold bg-transparent border-b-2 outline-none border-slate-200 focus:border-red-800">
-                  {productCategories.map((c) => (<option key={c.name}>{c.name}</option>))}
+              <form
+                onSubmit={handleWhatsAppRedirect}
+                className="space-y-5 lg:space-y-6"
+              >
+                <input
+                  name="name"
+                  required
+                  placeholder="Full Name"
+                  className="w-full py-4 font-bold border-b-2 outline-none border-slate-200 focus:border-red-800"
+                />
+                <select
+                  name="product"
+                  className="w-full py-4 font-bold bg-transparent border-b-2 outline-none border-slate-200 focus:border-red-800"
+                >
+                  {productCategories.map((c) => (
+                    <option key={c.name}>{c.name}</option>
+                  ))}
                 </select>
-                <textarea name="message" placeholder="Size, Quantity, Pressure Rating..." className="w-full py-4 font-bold border-b-2 outline-none resize-none border-slate-200 focus:border-red-800" rows={3} />
-                <button type="submit" className="w-full py-6 text-xl font-black text-white uppercase transition-all bg-green-600 hover:bg-black">
+                <textarea
+                  name="message"
+                  placeholder="Size, Quantity, Pressure Rating..."
+                  className="w-full py-4 font-bold border-b-2 outline-none resize-none border-slate-200 focus:border-red-800"
+                  rows={3}
+                />
+                <button
+                  type="submit"
+                  className="w-full py-6 text-xl font-black text-white uppercase transition-all bg-green-600 hover:bg-black"
+                >
                   Send to WhatsApp
                 </button>
               </form>
