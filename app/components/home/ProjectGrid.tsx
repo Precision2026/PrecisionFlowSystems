@@ -1,6 +1,6 @@
 // components/home/ProductGrid.tsx
-import { motion, AnimatePresence } from "framer-motion";
-import { ChevronDown } from "lucide-react";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 interface ProductCategory {
   name: string;
@@ -10,96 +10,63 @@ interface ProductCategory {
 
 interface ProductGridProps {
   productCategories: ProductCategory[];
-  expandedCat: string | null;
-  setExpandedCat: (cat: string | null) => void;
 }
 
-export default function ProductGrid({
-  productCategories,
-  expandedCat,
-  setExpandedCat,
-}: ProductGridProps) {
+export default function ProductGrid({ productCategories }: ProductGridProps) {
   return (
-    <section id="products" className="py-32 bg-white">
-      <div className="max-w-7xl mx-auto px-8">
-        <header className="mb-20 text-center">
-          <h2 className="text-5xl font-black uppercase mb-4 italic tracking-tighter">
-            Our Product <span className="text-red-800 underline">Ranges</span>
+    <section id="products" className="py-24 bg-white lg:py-32">
+      <div className="px-6 mx-auto lg:px-8 max-w-7xl">
+        <header className="mb-16 text-center lg:mb-20">
+          <h2 className="mb-4 text-4xl italic font-black leading-none tracking-tighter uppercase lg:text-6xl text-slate-900">
+            Product <span className="text-red-800 underline underline-offset-8">Ranges</span>
           </h2>
-          <p className="text-slate-500 font-bold uppercase tracking-widest text-sm italic">
-            High-Precision Instrumentation Components
+          <p className="text-[10px] lg:text-xs font-black tracking-[0.4em] uppercase text-slate-400">
+            Industrial Specification Components
           </p>
         </header>
 
-        <div className="grid lg:grid-cols-2 gap-10">
-          {productCategories.map((cat) => (
-            <article
-              key={cat.name}
-              className={`group border-4 transition-all overflow-hidden ${expandedCat === cat.name ? "border-red-800" : "border-slate-100 hover:border-yellow-500"}`}
-            >
-              <div className="relative h-64 overflow-hidden">
-                <img
-                  src={cat.image}
-                  alt={`${cat.name} - Precision Flow Systems`}
-                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
-                  loading="lazy"
-                />
-                <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-                  <h3 className="text-white text-4xl font-black uppercase italic tracking-tighter">
-                    {cat.name}
-                  </h3>
-                </div>
-              </div>
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-2">
+          {productCategories.map((cat) => {
+            // Helper to create a URL-friendly slug
+            const slug = cat.name.toLowerCase().replace(/\s+/g, '-');
 
-              <div className="p-8">
-                <ul className="grid grid-cols-2 gap-y-3">
-                  {cat.items.slice(0, 6).map((item) => (
-                    <li
-                      key={item}
-                      className="text-sm font-bold text-slate-600 uppercase flex items-center gap-2"
-                    >
-                      <div className="w-2 h-2 bg-yellow-500 rounded-full" />{" "}
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-
-                <button
-                  onClick={() =>
-                    setExpandedCat(expandedCat === cat.name ? null : cat.name)
-                  }
-                  className="mt-8 flex items-center gap-2 text-red-800 font-black uppercase tracking-widest text-sm"
-                >
-                  {expandedCat === cat.name
-                    ? "Show Less"
-                    : "View Full Component List"}
-                  <ChevronDown
-                    className={expandedCat === cat.name ? "rotate-180" : ""}
+            return (
+              <Link
+                key={cat.name}
+                href={`/products/${slug}`}
+                className="relative block overflow-hidden transition-all duration-500 border-4 group border-slate-100 hover:border-yellow-500"
+              >
+                {/* Image Container */}
+                <div className="relative h-72 lg:h-[400px] overflow-hidden">
+                  <img
+                    src={cat.image}
+                    alt={cat.name}
+                    className="object-cover w-full h-full transition-transform duration-700 scale-105 group-hover:scale-110 grayscale group-hover:grayscale-0"
+                    loading="lazy"
                   />
-                </button>
-
-                <AnimatePresence>
-                  {expandedCat === cat.name && (
-                    <motion.div
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: "auto", opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      className="mt-6 pt-6 border-t border-slate-100 grid grid-cols-1 md:grid-cols-2 gap-2"
-                    >
-                      {cat.items.map((item) => (
-                        <span
-                          key={item}
-                          className="text-xs font-bold text-slate-500 uppercase"
-                        >
-                          • {item}
-                        </span>
-                      ))}
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </div>
-            </article>
-          ))}
+                  
+                  {/* Overlay Gradient */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                  
+                  {/* Content Overlay */}
+                  <div className="absolute bottom-0 left-0 flex items-end justify-between w-full p-8">
+                    <div>
+                      <h3 className="text-3xl italic font-black leading-none tracking-tighter text-white uppercase lg:text-5xl">
+                        {cat.name}
+                      </h3>
+                      <p className="text-yellow-500 text-[10px] font-black uppercase tracking-widest mt-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                        Explore Full Collection
+                      </p>
+                    </div>
+                    
+                    <div className="p-3 text-black transition-all duration-300 transform translate-y-12 bg-white rounded-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100">
+                      <ArrowRight size={24} />
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            );
+          })}
         </div>
       </div>
     </section>
