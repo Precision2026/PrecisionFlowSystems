@@ -28,7 +28,7 @@ export default function Hero() {
           variants={container}
           initial="hidden"
           animate="visible"
-          className="text-7xl md:text-9xl font-black leading-[0.85] uppercase tracking-tighter mb-10"
+          className="text-5xl lg:text-7xl md:text-9xl font-black leading-[0.85] uppercase tracking-tighter mb-10"
         >
           <div className="flex flex-wrap gap-x-4">
             {"Flow Without Failure.".split(" ").map((word, i) => (

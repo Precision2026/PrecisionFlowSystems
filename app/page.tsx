@@ -131,7 +131,7 @@ export default function PrecisionFlowPage() {
   };
 
   return (
-    <main className="min-h-screen bg-white text-slate-900 font-sans selection:bg-yellow-400">
+    <main className="min-h-screen font-sans bg-white text-slate-900 selection:bg-yellow-400">
       {/* SEO Data Injection */}
       <BusinessSchema />
 
@@ -141,7 +141,7 @@ export default function PrecisionFlowPage() {
       {/* 2. Hero Section (The "Big Gesture" Animation) */}
       <Hero />
       <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-8">
+        <div className="px-8 mx-auto max-w-7xl">
           <AboutContent isShort={true} />
         </div>
       </section>
@@ -154,19 +154,19 @@ export default function PrecisionFlowPage() {
       />
 
       {/* 4. Industries Section */}
-      <section id="industries" className="py-32 bg-slate-950 text-white">
-        <div className="max-w-7xl mx-auto px-8 text-center">
-          <h2 className="text-6xl font-black uppercase tracking-tighter mb-16">
-            Industries <span className="text-red-800 italic">We Serve.</span>
+      <section id="industries" className="py-32 text-white bg-slate-950">
+        <div className="px-8 mx-auto text-center max-w-7xl">
+          <h2 className="mb-16 text-4xl font-black tracking-tighter uppercase lg:text-6xl">
+            Industries <span className="italic text-red-800">We Serve.</span>
           </h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+          <div className="grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-6">
             {industries.map((ind) => (
               <div
                 key={ind.name}
-                className="p-8 border border-slate-800 hover:border-yellow-500 transition-all flex flex-col items-center gap-4"
+                className="flex flex-col items-center gap-4 p-8 transition-all border border-slate-800 hover:border-yellow-500"
               >
                 <div className="text-yellow-500">{ind.icon}</div>
-                <p className="font-black uppercase text-xs tracking-widest">
+                <p className="text-xs font-black tracking-widest uppercase">
                   {ind.name}
                 </p>
               </div>
@@ -176,21 +176,24 @@ export default function PrecisionFlowPage() {
       </section>
 
       {/* 5. Contact / Quote Section */}
-      <section id="quote" className="py-32 bg-white">
-        <div className="max-w-7xl mx-auto px-8">
-          <div className="bg-yellow-500 p-1">
-            <div className="bg-white p-12 lg:p-20 grid lg:grid-cols-2 gap-20">
+      <section id="quote" className="py-20 overflow-hidden bg-white lg:py-32">
+        <div className="px-4 mx-auto max-w-7xl sm:px-8">
+          <div className="bg-yellow-500 p-[2px] sm:p-1">
+            {" "}
+            {/* Thinner border on mobile */}
+            <div className="grid gap-12 px-6 py-12 bg-white md:p-16 lg:p-20 lg:grid-cols-2 lg:gap-20">
               <header>
-                <h2 className="text-6xl font-black uppercase italic tracking-tighter mb-8">
+                {/* Responsive Heading: 4xl on mobile, 6xl on desktop */}
+                <h2 className="mb-6 text-4xl italic font-black leading-none tracking-tighter uppercase md:text-5xl lg:text-6xl lg:mb-8">
                   Request <span className="text-red-800">Quote.</span>
                 </h2>
-                <div className="space-y-8">
-                  <div className="flex gap-4 items-start">
+                <div className="space-y-6 lg:space-y-8">
+                  <div className="flex items-start gap-4">
                     <MessageSquare
                       className="text-green-600 shrink-0"
-                      size={32}
+                      size={28} // Slightly smaller icon for mobile
                     />
-                    <p className="text-slate-500 font-bold">
+                    <p className="text-sm font-bold leading-snug text-slate-500 md:text-base">
                       Instantly connect with our technical sales desk via
                       WhatsApp for ASTM SS 316 component pricing.
                     </p>
@@ -198,16 +201,19 @@ export default function PrecisionFlowPage() {
                 </div>
               </header>
 
-              <form onSubmit={handleWhatsAppRedirect} className="space-y-6">
+              <form
+                onSubmit={handleWhatsAppRedirect}
+                className="space-y-5 lg:space-y-6"
+              >
                 <input
                   name="name"
                   required
                   placeholder="Full Name"
-                  className="w-full border-b-2 border-slate-200 py-4 focus:border-red-800 outline-none font-bold text-lg"
+                  className="w-full py-3 text-base font-bold transition-colors border-b-2 outline-none border-slate-200 lg:py-4 focus:border-red-800 lg:text-lg"
                 />
                 <select
                   name="product"
-                  className="w-full border-b-2 border-slate-200 py-4 focus:border-red-800 outline-none font-bold text-lg"
+                  className="w-full py-3 text-base font-bold bg-transparent border-b-2 outline-none border-slate-200 lg:py-4 focus:border-red-800 lg:text-lg"
                 >
                   {productCategories.map((c) => (
                     <option key={c.name}>{c.name}</option>
@@ -216,12 +222,12 @@ export default function PrecisionFlowPage() {
                 <textarea
                   name="message"
                   placeholder="Size, Quantity, Pressure Rating..."
-                  className="w-full border-b-2 border-slate-200 py-4 focus:border-red-800 outline-none font-bold text-lg resize-none"
+                  className="w-full py-3 text-base font-bold border-b-2 outline-none resize-none border-slate-200 lg:py-4 focus:border-red-800 lg:text-lg"
                   rows={3}
                 />
                 <button
                   type="submit"
-                  className="w-full bg-green-600 text-white py-6 font-black uppercase text-xl hover:bg-black transition-all"
+                  className="w-full bg-green-600 text-white py-4 lg:py-6 font-black uppercase text-lg lg:text-xl hover:bg-black transition-all active:scale-[0.98]"
                 >
                   Send to WhatsApp
                 </button>
