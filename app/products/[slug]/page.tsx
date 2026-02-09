@@ -3,7 +3,7 @@ import { productCategories } from "../../constants/product" // Fixed import to m
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowLeft, CheckCircle2} from "lucide-react";
+import { ArrowLeft, CheckCircle2, Phone} from "lucide-react";
 import Navbar from "../../components/layout/Nav";
 import Footer from "../../components/layout/Footer";
 
@@ -144,7 +144,25 @@ export default async function Page({
 
           {/* WhatsApp CTA remains the same */}
           <div className="relative p-8 mt-32 overflow-hidden bg-slate-950 lg:p-20">
-             {/* ... (CTA Code) */}
+                         <div className="relative z-10 flex flex-col items-center justify-between gap-12 lg:flex-row">
+              <div className="max-w-xl text-center lg:text-left">
+                <h3 className="mb-6 text-3xl italic font-black leading-none tracking-tighter text-white uppercase lg:text-5xl">
+                  Inquire about <br />{" "}
+                  <span className="text-red-800">{category.name}</span>
+                </h3>
+                <p className="text-xs font-bold tracking-widest uppercase text-slate-400">
+                  Technical sales support available for custom threading and
+                  sizing.
+                </p>
+              </div>
+              <a
+                href="https://wa.me/917839929808"
+                className="flex items-center gap-4 px-12 py-6 font-black tracking-widest text-black uppercase transition-all bg-yellow-500 shadow-2xl group hover:bg-white active:scale-95"
+              >
+                <Phone size={20} /> Request Technical Quote
+              </a>
+            </div>
+            <div className="absolute top-0 right-0 w-1/2 h-full skew-x-12 bg-red-800/5 translate-x-1/4" />
           </div>
         </div>
       </main>
