@@ -30,5 +30,5 @@ def convert_jpg_to_webp(directory):
                 print(f"Failed to convert {filename}: {e}")
 
 # Usage
-target_folder = "/Users/prabhatthapa/precisionflow/public/tube-fittings" # Change this to your folder path
+target_folder = "/Users/prabhatthapa/precisionflow/public/pipe-fittings" # Change this to your folder path
 convert_jpg_to_webp(target_folder)
