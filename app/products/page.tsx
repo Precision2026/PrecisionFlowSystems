@@ -1,9 +1,15 @@
 // app/products/page.tsx
 import Navbar from "../components/layout/Nav";
 import Footer from "../components/layout/Footer";
+// Ensure this path is 100% correct and matches your ProductGrid component file name
 import ProductGrid from "../components/home/ProjectGrid";
-import { productCategories } from "../constants/product";
+// Import the data AND the Interface to ensure sync
+import { productCategories, ProductCategory } from "../constants/product"; 
 import { Package, ShieldCheck, Zap } from "lucide-react";
+
+interface ProductGridProps {
+  productCategories: ProductCategory[];
+}
 
 export default function AllProductsPage() {
   return (
@@ -31,22 +37,23 @@ export default function AllProductsPage() {
       </section>
 
       {/* Features Ribbon */}
-      <div className="py-6 bg-yellow-500">
+      <div className="py-6 bg-yellow-500 border-y-4 border-black">
         <div className="grid grid-cols-1 gap-8 px-8 mx-auto max-w-7xl md:grid-cols-3">
-          <div className="flex items-center gap-4 text-xs font-black tracking-widest text-black uppercase">
-            <ShieldCheck size={24} /> SS 316 Certified
+          <div className="flex items-center gap-4 text-[10px] font-black tracking-widest text-black uppercase">
+            <ShieldCheck size={20} strokeWidth={3} /> SS 316 Certified
           </div>
-          <div className="flex items-center gap-4 text-xs font-black tracking-widest text-black uppercase">
-            <Package size={24} /> Bulk Supply Available
+          <div className="flex items-center gap-4 text-[10px] font-black tracking-widest text-black uppercase">
+            <Package size={20} strokeWidth={3} /> Global Supply
           </div>
-          <div className="flex items-center gap-4 text-xs font-black tracking-widest text-black uppercase">
-            <Zap size={24} /> Fast Technical Support
+          <div className="flex items-center gap-4 text-[10px] font-black tracking-widest text-black uppercase">
+            <Zap size={20} strokeWidth={3} /> Technical Support
           </div>
         </div>
       </div>
 
       {/* The Product Grid */}
       <section className="py-24">
+        {/* If productCategories still shows an error here, check Section 2 below */}
         <ProductGrid productCategories={productCategories} />
       </section>
 

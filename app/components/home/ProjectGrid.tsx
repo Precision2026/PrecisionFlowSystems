@@ -2,11 +2,7 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
-interface ProductCategory {
-  name: string;
-  image: string;
-  items: string[];
-}
+import { ProductCategory } from "../../constants/product";
 
 interface ProductGridProps {
   productCategories: ProductCategory[];
