@@ -1,7 +1,7 @@
 // components/home/ProductGrid.tsx
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-
+import Image from "next/image";
 import { ProductCategory } from "../../constants/product";
 
 interface ProductGridProps {
@@ -33,16 +33,17 @@ export default function ProductGrid({ productCategories }: ProductGridProps) {
                 className="relative block overflow-hidden transition-all duration-500 border-4 group border-slate-100 hover:border-yellow-500"
               >
                 {/* Image Container */}
-                <div className="relative h-72 lg:h-[400px] overflow-hidden">
-                  <img
-                    src={cat.image}
-                    alt={cat.name}
-                    className="object-cover w-full h-full transition-transform duration-700 scale-105 group-hover:scale-110 grayscale group-hover:grayscale-0"
-                    loading="lazy"
-                  />
+                <div className="relative h-72 lg:h-100 overflow-hidden">
+                  <Image
+    src={cat.image}
+    alt={cat.name}
+    fill
+    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+    className="object-cover transition-transform duration-700 scale-105 group-hover:scale-110 grayscale group-hover:grayscale-0"
+  />
                   
                   {/* Overlay Gradient */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                  <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent" />
                   
                   {/* Content Overlay */}
                   <div className="absolute bottom-0 left-0 flex items-end justify-between w-full p-8">
