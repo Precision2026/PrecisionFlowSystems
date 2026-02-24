@@ -4,7 +4,7 @@ import Footer from "../components/layout/Footer";
 // Ensure this path is 100% correct and matches your ProductGrid component file name
 import ProductGrid from "../components/home/ProjectGrid";
 // Import the data AND the Interface to ensure sync
-import { productCategories, ProductCategory } from "../constants/product"; 
+import { productCategories} from "../constants/product"; 
 import { Package, ShieldCheck, Zap } from "lucide-react";
 
 

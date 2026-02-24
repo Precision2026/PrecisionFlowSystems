@@ -1,4 +1,4 @@
-import { productCategories, ProductCategory } from "../../constants/product";
+import { productCategories} from "../../constants/product";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
@@ -56,7 +56,7 @@ export default async function Page({
               </h1>
               <p className="max-w-xl text-lg leading-relaxed text-slate-400 lg:text-xl">{category.description}</p>
             </div>
-            <div className="relative w-full overflow-hidden border shadow-2xl group aspect-square lg:aspect-[4/5] bg-slate-900 border-white/10">
+            <div className="relative w-full overflow-hidden border shadow-2xl group aspect-square lg:aspect-4/5 bg-slate-900 border-white/10">
               <Image src={category.image} alt={category.name} fill priority className="object-cover grayscale group-hover:grayscale-0 transition-all duration-700" />
             </div>
           </div>
@@ -83,7 +83,7 @@ export default async function Page({
               <h3 className="text-3xl font-black italic uppercase tracking-tighter text-slate-900">
                 {sub.subName}
               </h3>
-              <div className="h-[2px] flex-1 bg-slate-100 group-hover/section:bg-red-800 transition-colors duration-500" />
+              <div className="h-0.5 flex-1 bg-slate-100 group-hover/section:bg-red-800 transition-colors duration-500" />
             </div>
             <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
               {sub.subItems.map((subItem, sIdx) => (
@@ -108,7 +108,7 @@ export default async function Page({
               <h3 className="text-3xl font-black italic uppercase tracking-tighter text-slate-900">
                 Standard Components
               </h3>
-              <div className="h-[2px] flex-1 bg-slate-100 group-hover/section:bg-red-800 transition-colors duration-500" />
+              <div className="h-0.5 flex-1 bg-slate-100 group-hover/section:bg-red-800 transition-colors duration-500" />
             </div>
           )}
           
