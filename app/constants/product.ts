@@ -62,7 +62,7 @@ export const productCategories: ProductCategory[] = [
       },
       {
         subName: "Monoflanges Valves",
-        subItems: ["", "", ""]
+        subItems: ["monoflange-valve-1", "monoflange-valve-2", "monoflange-valve-3"]
       },
       {
         subName: "Manifold Valves",
