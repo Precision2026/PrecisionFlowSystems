@@ -7,9 +7,6 @@ import ProductGrid from "../components/home/ProjectGrid";
 import { productCategories, ProductCategory } from "../constants/product"; 
 import { Package, ShieldCheck, Zap } from "lucide-react";
 
-interface ProductGridProps {
-  productCategories: ProductCategory[];
-}
 
 export default function AllProductsPage() {
   return (
