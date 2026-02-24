@@ -154,7 +154,7 @@ export default async function Page({
 function ProductCard({ name, categorySlug, index, imgSlug }: { name: string, categorySlug: string, index: string, imgSlug: string }) {
   return (
     <div className="flex flex-col p-4 transition-all duration-500 border group border-slate-50 hover:border-red-800 hover:shadow-2xl hover:shadow-slate-200 bg-white">
-      <div className="relative w-full h-64 mb-6 overflow-hidden border bg-slate-50 border-slate-100">
+      <div className="relative w-full h-64 mb-6 overflow-hidden border bg-white border-slate-600 shadow-lg hover:border-red-800">
         <Image
           src={`/${categorySlug}/${imgSlug}.webp`}
           alt={name}
