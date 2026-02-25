@@ -213,11 +213,11 @@ export const productCategories: ProductCategory[] = [
       {
         subName: "Manifold Valves",
         subItems: [
-          "Manifold valve 1",
-          "Manifold valve 2",
-          "Manifold Valve (2 Way)",
-          "Double Block & Bleed Gauge Valves",
-          "5 Way T Type Manifold Valve",
+            "Manifold valve 1",
+            "Manifold valve 2",
+            "Manifold Valve (2 Way)",
+            "Double Block & Bleed Gauge Valves",
+            "5 Way T Type Manifold Valve",
         ],
         specs: {
           "Max. Working Pressure": "Up to 10,000 psi (414 bar)",
