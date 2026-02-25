@@ -26,7 +26,7 @@ export const productCategories: ProductCategory[] = [
     description:
       "Double ferrule instrumentation tube fittings providing leak-proof, torque-free seals in all instrumentation and process tubing.",
     image:
-      "https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80&w=800",
+      "/tube-fittings/reducing-union-tee.webp",
     items: [
       "Front Ferrule",
       "Back Ferrule",
@@ -69,7 +69,7 @@ export const productCategories: ProductCategory[] = [
     description:
       "Precision machined pipe fittings manufactured to meet the rigorous requirements of high-pressure industrial piping systems.",
     image:
-      "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&q=80&w=800",
+      "/pipe-fittings/male-elbow.webp",
     items: [
       "Hex Plug",
       "Hex Bushing",
@@ -94,7 +94,7 @@ export const productCategories: ProductCategory[] = [
     slug: "instrumentation-valves",
     description:
       "Reliable flow control solutions including needle, ball, and check valves for instrumentation and process control applications.",
-    image: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1",
+    image: "/instrumentation-valves/monoflange-main.webp",
     items: [
       {
         subName: "Needle Valves",
@@ -213,6 +213,8 @@ export const productCategories: ProductCategory[] = [
       {
         subName: "Manifold Valves",
         subItems: [
+          "Manifold valve 1",
+          "Manifold valve 2",
           "Manifold Valve (2 Way)",
           "Double Block & Bleed Gauge Valves",
           "5 Way T Type Manifold Valve",
@@ -239,7 +241,7 @@ export const productCategories: ProductCategory[] = [
     slug: "specialized-equipment",
     description:
       "High-quality accessories and heavy-duty industrial components including pressure gauges and condensate pots.",
-    image: "https://images.unsplash.com/photo-1535813547-99c956a0d58a",
+    image: "/specialized-equipment/air-header.webp",
     items: [
       {
         subName: "Condesate Pots",
