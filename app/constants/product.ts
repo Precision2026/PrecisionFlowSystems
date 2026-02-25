@@ -54,7 +54,7 @@ export const productCategories: ProductCategory[] = [
       },
       {
         subName: "Relief Safety Valves",
-        subItems: ["Check Valve (Female x Female)", "Check Valve (NPT Male x Female)", "Check Valve (Inch OD Tubes)", "Check Valve (Female x Male)"]
+        subItems: ["Check Valve (Female x Female)", "Check Valve (NPT Male x Male)", "Check Valve (Inch OD Tubes)", "Check Valve (Female x Male)"]
       },
       {
         subName: "Safety Relief Valves",
