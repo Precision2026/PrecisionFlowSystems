@@ -7,7 +7,6 @@ export default function Footer() {
     <footer className="pt-24 pb-12 overflow-hidden text-black bg-slate-100">
       {/* 1. Changed to grid-cols-1 by default, and adjusted max-width/padding */}
       <div className="grid grid-cols-1 gap-12 px-6 mx-auto mb-16 max-w-7xl lg:px-8 lg:grid-cols-4">
-        
         <div className="lg:col-span-2">
           <div className="flex items-center gap-4 mb-6 cursor-pointer group">
             {/* 2. Responsive Logo Container: Removed fixed w-80 */}
@@ -42,16 +41,32 @@ export default function Footer() {
           </h4>
           <ul className="space-y-6 text-sm font-bold uppercase">
             <li className="flex items-center gap-3 transition-colors hover:text-red-800">
-              <Phone size={18} className="text-red-800 shrink-0" /> +91 7839929808
+              <Phone size={18} className="text-red-800 shrink-0" /> +91
+              7839929808
             </li>
             <li className="flex items-center gap-3 font-sans lowercase transition-colors hover:text-red-800">
               <Mail size={18} className="text-red-800 shrink-0" />{" "}
-              <span className="break-all">sales@precisionflowsystems.co.in</span>
+              <span className="break-all">
+                sales@precisionflowsystems.co.in
+              </span>
             </li>
             <li className="flex items-start gap-3">
-              <MapPin size={18} className="text-red-800 shrink-0" />
+              <MapPin size={18} className="text-red-800 shrink-0 mt-1" />
               <span className="font-medium normal-case">
+                <strong>Unit - I (Sales Office)</strong>
+                <br />
                 Lubna Height, 5th floor, Shil Road, Mumbai, Maharashtra 400612
+              </span>
+            </li>
+
+            {/* Unit - II: Manufacturing Unit */}
+            <li className="flex items-start gap-3">
+              <MapPin size={18} className="text-red-800 shrink-0 mt-1" />
+              <span className="font-medium normal-case">
+                <strong>Unit - II (Manufacturing Unit)</strong>
+                <br />
+                Khairpada No. 31, Waliv Road, Vasai East, Palghar - 401208,
+                Maharashtra, India
               </span>
             </li>
           </ul>
@@ -62,10 +77,35 @@ export default function Footer() {
             Quick Links
           </h4>
           <ul className="space-y-4 text-xs font-black uppercase text-slate-800">
-            <li><a href="#products" className="transition-colors hover:text-red-800">Product Range</a></li>
-            <li><a href="#industries" className="transition-colors hover:text-red-800">Industrial Sectors</a></li>
-            <li><a href="#about" className="transition-colors hover:text-red-800">Company Profile</a></li>
-            <li><a href="#quote" className="font-bold text-red-800 hover:underline">Request Technical Data</a></li>
+            <li>
+              <a
+                href="#products"
+                className="transition-colors hover:text-red-800"
+              >
+                Product Range
+              </a>
+            </li>
+            <li>
+              <a
+                href="#industries"
+                className="transition-colors hover:text-red-800"
+              >
+                Industrial Sectors
+              </a>
+            </li>
+            <li>
+              <a href="#about" className="transition-colors hover:text-red-800">
+                Company Profile
+              </a>
+            </li>
+            <li>
+              <a
+                href="#quote"
+                className="font-bold text-red-800 hover:underline"
+              >
+                Request Technical Data
+              </a>
+            </li>
           </ul>
         </div>
       </div>
