@@ -28,17 +28,6 @@ export default function ProductGrid({ productCategories }: ProductGridProps) {
                 href={`/products/${cat.slug}`}
                 className="relative block overflow-hidden transition-all duration-500 border-4 group border-slate-100 hover:border-yellow-500"
               >
-                {/* SPECIFICATIONS BAR - Renders only if specs exist */}
-                {cat.specs && Object.keys(cat.specs).length > 0 && (
-                  <div className="flex flex-wrap gap-4 px-6 py-3 bg-slate-50 border-b border-slate-100 group-hover:bg-yellow-50 transition-colors">
-                    {Object.entries(cat.specs).map(([key, value]) => (
-                      <div key={key} className="flex flex-col">
-                        <span className="text-[8px] font-bold uppercase text-slate-400 tracking-widest">{key}</span>
-                        <span className="text-xs font-black text-slate-900 uppercase">{value}</span>
-                      </div>
-                    ))}
-                  </div>
-                )}
 
                 {/* Image Container */}
                 <div className="relative h-72 lg:h-100 overflow-hidden">
