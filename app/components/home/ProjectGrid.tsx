@@ -1,4 +1,3 @@
-// components/home/ProductGrid.tsx
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
@@ -23,29 +22,36 @@ export default function ProductGrid({ productCategories }: ProductGridProps) {
 
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-2">
           {productCategories.map((cat) => {
-            // Helper to create a URL-friendly slug
-            const slug = cat.name.toLowerCase().replace(/\s+/g, '-');
-
             return (
               <Link
                 key={cat.name}
-                href={`/products/${slug}`}
+                href={`/products/${cat.slug}`}
                 className="relative block overflow-hidden transition-all duration-500 border-4 group border-slate-100 hover:border-yellow-500"
               >
+                {/* SPECIFICATIONS BAR - Renders only if specs exist */}
+                {cat.specs && Object.keys(cat.specs).length > 0 && (
+                  <div className="flex flex-wrap gap-4 px-6 py-3 bg-slate-50 border-b border-slate-100 group-hover:bg-yellow-50 transition-colors">
+                    {Object.entries(cat.specs).map(([key, value]) => (
+                      <div key={key} className="flex flex-col">
+                        <span className="text-[8px] font-bold uppercase text-slate-400 tracking-widest">{key}</span>
+                        <span className="text-xs font-black text-slate-900 uppercase">{value}</span>
+                      </div>
+                    ))}
+                  </div>
+                )}
+
                 {/* Image Container */}
                 <div className="relative h-72 lg:h-100 overflow-hidden">
                   <Image
-    src={cat.image}
-    alt={cat.name}
-    fill
-    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-    className="object-cover transition-transform duration-700 scale-105 group-hover:scale-110 grayscale group-hover:grayscale-0"
-  />
+                    src={cat.image}
+                    alt={cat.name}
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    className="object-cover transition-transform duration-700 scale-105 group-hover:scale-110 grayscale group-hover:grayscale-0"
+                  />
                   
-                  {/* Overlay Gradient */}
                   <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent" />
                   
-                  {/* Content Overlay */}
                   <div className="absolute bottom-0 left-0 flex items-end justify-between w-full p-8">
                     <div>
                       <h3 className="text-3xl italic font-black leading-none tracking-tighter text-white uppercase lg:text-5xl">
