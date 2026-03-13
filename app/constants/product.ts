@@ -142,7 +142,7 @@ export const productCategories: ProductCategory[] = [
         },
       },
       {
-        subName: "Relief Safety Valves",
+        subName: "Check Valves (NRV)",
         subItems: [
           "Check Valve (Female x Female)",
           "Check Valve (NPT Male x Male)",
@@ -152,7 +152,7 @@ export const productCategories: ProductCategory[] = [
         specs: {
           "Maximum Working Pressure": "Up to 10,000 psi (689 bar)",
           "Working Temperature":
-            "• Up to 212°F (100°C) with Delrin Packing\n• Up to 464°F (240°C) with PTFE Packing\n• Up to 842°F (450°C) with PEEK Packing",
+            "-10°F(-23°C) to 395°F(200°C) With Viton 'O' Ring",
           "Body Material":
             "SS304L / SS316L / Monel / Hastelloy / Inconel / Duplex",
           Size: '• 1/4" ~ 2" Pipe Thread • 3 ~ 25 mm OD • 1/8" ~ 1" OD',
@@ -177,15 +177,16 @@ export const productCategories: ProductCategory[] = [
           "Female Threaded 6000 psi",
         ],
         specs: {
-          "Maximum Working Pressure": "Up to 10,000 psi (689 bar)",
+          "Maximum Working Pressure": "Up to 6,000 psi (414 bar)",
+          "Set Pressure Range": "10 to 6,000 psi (3.4 to 414 bar)",
           "Working Temperature":
-            "-10°F (-23°C) to 392°F (200°C) with Viton ‘O’ Ring",
+            "-10°F (-30°C) to 392°F (200°C)",
           "Body Material":
             "SS304L / SS316L / Monel / Hastelloy / Inconel / Duplex",
           "Thread Type": "NPT / BSPT / ISO / SAE",
           Size: "• 1/8” ~ 2” Pipe Thread • 3 ~ 25 mm OD • 1/8” ~ 1” OD",
-          Operation: "Instant shut-off in upstream condition",
-          Design: "Compact Design",
+          "Spring System": "Multiple Springs For Wide Range Of Set Pressure",
+          Adjustment: "Easy External Pressure Adjustment • Label Identifies Set Pressure Range",
           Testing: "100% Factory Tested",
           "Material Traceability": "Available",
         },
@@ -282,6 +283,49 @@ export const productCategories: ProductCategory[] = [
         },
       },
       "Flanges",
+    ],
+  },
+  {
+    name: "Others",
+    slug: "others",
+    description:
+      "A collection of miscellaneous industrial components, maintenance tools, and uncategorized process hardware.",
+    image: "/others/general-hardware.webp",
+    items: [
+      {
+        subName: "Pressure Gauges",
+        subItems: [
+          "Bourdon Tube Pressure Gauge",
+          "Digital Pressure Gauge",
+          "Diaphragm Pressure Gauge",
+          "Vacuum Gauge",
+        ],
+        specs: {
+          "Dial Size": "40, 50, 63, 100, 150, 250 mm",
+          Accuracy: "± 1.0% to ± 2.5% of Full Scale",
+          Range: "Vacuum to 10,000 psi",
+          Material: "SS316 Case & Internal, Brass Internal (Optional)",
+          Connection: "Bottom or Back Entry (NPT/BSP)",
+        },
+      },
+      {
+        subName: "Gaskets & Seals",
+        subItems: [
+          "Spiral Wound Gasket",
+          "PTFE Envelop Gasket",
+          "Ring Type Joint (RTJ)",
+          "O-Rings (Viton, EPDM, NBR)",
+        ],
+        specs: {
+          Material: "SS316L, Graphite Filler, PTFE, Pure Viton",
+          Standards: "ASME B16.20, ASME B16.21",
+          Temperature: "Up to 1000°C (Graphite) / 260°C (PTFE)",
+        },
+      },
+      "Syphons",
+      "Thermowells",
+      "Snubbers",
+      "Orifice Plates",
     ],
   },
 ];
