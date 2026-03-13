@@ -21,7 +21,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           className="inline-flex items-center gap-2 px-4 py-2 mb-8 text-xs font-black text-white uppercase bg-red-800 rounded-full"
         >
-          <CheckCircle2 size={16} /> Premium SS 316 Quality
+          <CheckCircle2 size={16} /> Premium ISO 9001:2015 certifiedQuality
         </motion.div>
 
         <motion.h1

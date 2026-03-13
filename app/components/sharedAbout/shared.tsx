@@ -17,7 +17,7 @@ export default function AboutContent({ isShort = false }: AboutProps) {
 
         <p className="bg-slate-50 p-4 border-l-4 border-red-800 italic text-slate-800 mb-2.5">
           Based in Mumbai, India, **Precision Flow Systems** is your trusted
-          partner for high-quality SS 316 components and ASTM-standard products.
+          partner for high-quality ISO 9001:2015 certified components and ASTM-standard products.
           We ensure reliable fluid control and leak-free performance for
           critical industrial sectors.
         </p>
@@ -88,7 +88,7 @@ export default function AboutContent({ isShort = false }: AboutProps) {
         </div>
         <div className="bg-slate-900 p-8 text-white border-b-4 border-yellow-500">
           <h3 className="text-2xl font-black text-yellow-500 mb-2 uppercase">
-            SS 316
+            ISO 9001:2015 certified
           </h3>
           <p className="font-bold uppercase text-[10px] tracking-widest text-slate-400">
             Core Specialization

@@ -22,8 +22,7 @@ export default function Footer() {
           </div>
           <p className="max-w-md mb-8 text-base italic font-medium leading-relaxed text-slate-900 md:text-lg">
             &quot;Engineering leak-proof excellence for the world&apos;s most
-            demanding industrial environments. Specializing in ASTM-standard SS
-            316 components.&quot;
+            demanding industrial environments. Specializing in ASTM-standard ISO 9001:2015 certified components.&quot;
           </p>
           <div className="flex flex-wrap gap-4">
             <div className="border border-slate-800 px-4 py-2 text-[10px] font-black uppercase tracking-widest text-slate-800">

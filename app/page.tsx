@@ -95,7 +95,7 @@ export default function PrecisionFlowPage() {
                   />
                   <p className="text-sm font-bold leading-snug text-slate-500 md:text-base">
                     Instantly connect with our technical sales desk via WhatsApp
-                    for ASTM SS 316 component pricing.
+                    for ASTM ISO 9001:2015 certified component pricing.
                   </p>
                 </div>
               </header>
