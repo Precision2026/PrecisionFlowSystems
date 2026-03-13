@@ -16,6 +16,7 @@ const navLinks = [
       { name: "Pipe Fittings", slug: "pipe-fittings" },
       { name: "Instrumentation Valves", slug: "instrumentation-valves" },
       { name: "Specialized Equipment", slug: "specialized-equipment" },
+      { name: "Others", slug: "others" },
     ]
   },
   { name: "Industries", href: "/#industries" },
@@ -37,6 +38,7 @@ export default function Navbar() {
         { name: "Pipe Fittings", slug: "pipe-fittings" },
         { name: "Instrumentation Valves", slug: "instrumentation-valves" },
         { name: "Specialized Equipment", slug: "specialized-equipment" },
+        { name: "Others", slug: "others" },
       ]
     },
     { name: "Industries", href: "/#industries" },
