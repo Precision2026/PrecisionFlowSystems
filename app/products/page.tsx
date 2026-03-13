@@ -50,7 +50,7 @@ export default function AllProductsPage() {
 
       {/* The Product Grid */}
       <section className="py-24">
-        {/* If productCategories still shows an error here, check Section 2 below */}
+
         <ProductGrid productCategories={productCategories} />
       </section>
 
