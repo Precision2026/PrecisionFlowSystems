@@ -1,6 +1,7 @@
 export interface SubCategory {
   subName: string;
   subItems: string[];
+  has_products_name?: boolean;
   specs?: Record<string, string>; // Optional: { "Size": "1/8 to 2 inch", "Material": "SS316" }
 }
 
@@ -25,8 +26,7 @@ export const productCategories: ProductCategory[] = [
     },
     description:
       "Double ferrule instrumentation tube fittings providing leak-proof, torque-free seals in all instrumentation and process tubing.",
-    image:
-      "/tube-fittings/reducing-union-tee.webp",
+    image: "/tube-fittings/reducing-union-tee.webp",
     items: [
       "Front Ferrule",
       "Back Ferrule",
@@ -68,8 +68,7 @@ export const productCategories: ProductCategory[] = [
     },
     description:
       "Precision machined pipe fittings manufactured to meet the rigorous requirements of high-pressure industrial piping systems.",
-    image:
-      "/pipe-fittings/male-elbow.webp",
+    image: "/pipe-fittings/male-elbow.webp",
     items: [
       "Hex Plug",
       "Hex Bushing",
@@ -179,14 +178,14 @@ export const productCategories: ProductCategory[] = [
         specs: {
           "Maximum Working Pressure": "Up to 6,000 psi (414 bar)",
           "Set Pressure Range": "10 to 6,000 psi (3.4 to 414 bar)",
-          "Working Temperature":
-            "-10°F (-30°C) to 392°F (200°C)",
+          "Working Temperature": "-10°F (-30°C) to 392°F (200°C)",
           "Body Material":
             "SS304L / SS316L / Monel / Hastelloy / Inconel / Duplex",
           "Thread Type": "NPT / BSPT / ISO / SAE",
           Size: "• 1/8” ~ 2” Pipe Thread • 3 ~ 25 mm OD • 1/8” ~ 1” OD",
           "Spring System": "Multiple Springs For Wide Range Of Set Pressure",
-          Adjustment: "Easy External Pressure Adjustment • Label Identifies Set Pressure Range",
+          Adjustment:
+            "Easy External Pressure Adjustment • Label Identifies Set Pressure Range",
           Testing: "100% Factory Tested",
           "Material Traceability": "Available",
         },
@@ -214,11 +213,11 @@ export const productCategories: ProductCategory[] = [
       {
         subName: "Manifold Valves",
         subItems: [
-            "Manifold valve 1",
-            "Manifold valve 2",
-            "Manifold Valve (2 Way)",
-            "Double Block & Bleed Gauge Valves",
-            "5 Way T Type Manifold Valve",
+          "Manifold valve 1",
+          "Manifold valve 2",
+          "Manifold Valve (2 Way)",
+          "Double Block & Bleed Gauge Valves",
+          "5 Way T Type Manifold Valve",
         ],
         specs: {
           "Max. Working Pressure": "Up to 10,000 psi (414 bar)",
@@ -293,63 +292,47 @@ export const productCategories: ProductCategory[] = [
     image: "/others/general-hardware.webp",
     items: [
       {
-        subName: "Pressure Gauges",
-        subItems: [
-          "Bourdon Tube Pressure Gauge",
-          "Digital Pressure Gauge",
-          "Diaphragm Pressure Gauge",
-          "Vacuum Gauge",
-        ],
+        subName: "Pressure Gauge Accessories",
+        has_products_name: false,
+        subItems: ["", "", "", "", "", "", "", "", ""],
+      },
+      {
+        subName: "Seamless Tubes",
+        subItems: ["Seamless Tube"],
         specs: {
-          "Dial Size": "40, 50, 63, 100, 150, 250 mm",
-          Accuracy: "± 1.0% to ± 2.5% of Full Scale",
-          Range: "Vacuum to 10,000 psi",
-          Material: "SS316 Case & Internal, Brass Internal (Optional)",
-          Connection: "Bottom or Back Entry (NPT/BSP)",
+          Available: "SS304L/SS316L, Monel, Hastelloy, Inconel & Duplex",
         },
       },
       {
-        subName: "Gaskets & Seals",
-        subItems: [
-          "Spiral Wound Gasket",
-          "PTFE Envelop Gasket",
-          "Ring Type Joint (RTJ)",
-          "O-Rings (Viton, EPDM, NBR)",
-        ],
+        subName: "Pressure Regulators",
+        has_products_name: false,
+        subItems: ["", "", ""],
         specs: {
-          Material: "SS316L, Graphite Filler, PTFE, Pure Viton",
-          Standards: "ASME B16.20, ASME B16.21",
-          Temperature: "Up to 1000°C (Graphite) / 260°C (PTFE)",
+          "Available Material": "SS316L",
+          "Design Features":
+            "Piston sensed design, Back pressure, Single stage & Double stage configurations",
+          "Max Working Pressure": "Up to 6000 psi (414 bar)",
+          Performance:
+            "Adjustable stop limits for maximum outlet pressure, Low operating torque",
+          Testing: "100% factory tested, Material traceability available",
+          Options: "Variety of porting and material options",
         },
       },
-      "Syphons",
-      "Thermowells",
-      "Snubbers",
-      "Orifice Plates",
+      {
+        subName: "Thermowells",
+        has_products_name: false,
+        subItems: [""],
+        specs: {
+          "Available Materials":
+            "SS304L/SS316L, Monel, Hastelloy, Inconel & Duplex",
+          "Design Range": "Threaded, Flanged, Socket weld, Tapered & Straight",
+          "Instrument Connection": "1/2” NPT / NPSM",
+          "Insertion Length": "Up to 28 inches (U)",
+          Construction: "One piece construction",
+          Customization: "Other thread sizes available upon request",
+          "Quality Assurance": "Material traceability available",
+        },
+      },
     ],
   },
 ];
-
-// // constants/products.ts
-// export const productCategories = [
-//   {
-//     name: "Instrumentation Valves",
-//     slug: "instrumentation-valves",
-//     description: "Reliable flow control solutions including needle, ball, and check valves for instrumentation and process control applications.",
-//     image: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&q=80&w=800",
-//     items: [
-//       "Ball Valves", "Needle Valves", "Check Valve", "Manifold Valves (2W, 3W, 5W)",
-//       "Monoflanges Valves (Sbbs, Dbbs)", "Gate Valve", "Globe Valve",
-//     ],
-//   },
-//   {
-//     name: "Specialized Equipment",
-//     slug: "specialized-equipment",
-//     description: "High-quality accessories and heavy-duty industrial components including pressure gauges and condensate pots.",
-//     image: "https://images.unsplash.com/photo-1535813547-99c956a0d58a?auto=format&fit=crop&q=80&w=800",
-//     items: [
-//       "Pressure Gauge Accessories", "Seamless Tube (SS, Hestoalloy, Monel, Inconel)",
-//       "Pipe (MS, SS)", "Condesate Pots", "Air Header", "Flanges",
-//     ],
-//   },
-// ];

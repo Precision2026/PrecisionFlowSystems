@@ -9,6 +9,7 @@ import Footer from "../../components/layout/Footer";
 interface SubCategory {
   subName: string;
   subItems: string[];
+  has_products_name?: boolean, 
   specs?: Record<string, string>;
 }
 function SpecDisplay({ specs }: { specs?: Record<string, string> }) {
@@ -93,7 +94,9 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
                     {sub.subItems.map((subItem, sIdx) => (
                       <ProductCard 
                         key={subItem} 
-                        name={subItem} 
+                        name={subItem}
+                        subName = {sub.subName}
+                        has_products_name={sub.has_products_name} 
                         categorySlug={category.slug} 
                         index={`${idx + 1}.${sIdx + 1}`} 
                         imgSlug={generateImageSlug(subItem)} 
@@ -155,12 +158,16 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
 
 /** * Sub-component for individual Product Cards to keep the main logic clean
  */
-function ProductCard({ name, categorySlug, index, imgSlug }: { name: string, categorySlug: string, index: string, imgSlug: string }) {
+function ProductCard({ name, subName, categorySlug, has_products_name, index, imgSlug }: { name: string, subName?: string, categorySlug: string, has_products_name?: boolean, index: string, imgSlug: string }) {
+  const cleanSubName = subName? subName.replaceAll(' ', '_') : ''
+  const img = has_products_name === false ? `${cleanSubName}${index}` : imgSlug
+  
   return (
     <div className="flex flex-col p-4 transition-all duration-500 border group border-slate-50 hover:border-red-800 hover:shadow-2xl hover:shadow-slate-200 bg-white">
+
       <div className="relative w-full h-64 mb-6 overflow-hidden border bg-white border-slate-600 shadow-lg hover:border-red-800">
         <Image
-          src={`/${categorySlug}/${imgSlug}.webp`}
+          src={`/${categorySlug}/${img}.webp`}
           alt={name}
           fill
           className="object-contain p-6 transition-all duration-700 group-hover:scale-110"
