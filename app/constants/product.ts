@@ -289,12 +289,15 @@ export const productCategories: ProductCategory[] = [
     slug: "others",
     description:
       "A collection of miscellaneous industrial components, maintenance tools, and uncategorized process hardware.",
-    image: "/others/general-hardware.webp",
+    image: "/others/Pressure_Regulators3.1.webp",
     items: [
       {
         subName: "Pressure Gauge Accessories",
         has_products_name: false,
         subItems: ["", "", "", "", "", "", "", "", ""],
+        specs: {
+          Available: "SS304L/SS316L, Monel, Hastelloy, Inconel & Duplex"
+        }
       },
       {
         subName: "Seamless Tubes",
