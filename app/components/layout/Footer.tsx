@@ -58,16 +58,7 @@ export default function Footer() {
               </span>
             </li>
 
-            {/* Unit - II: Manufacturing Unit */}
-            <li className="flex items-start gap-3">
-              <MapPin size={18} className="text-red-800 shrink-0 mt-1" />
-              <span className="font-medium normal-case">
-                <strong>Unit - II (Manufacturing Unit)</strong>
-                <br />
-                Khairpada No. 31, Waliv Road, Vasai East, Palghar - 401208,
-                Maharashtra, India
-              </span>
-            </li>
+          
           </ul>
         </div>
 
